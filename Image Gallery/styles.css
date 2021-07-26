@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    overflow: none;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-family: cursive, 'Times New Roman', Times, serif;
+}
+body {
+    background: linear-gradient(90deg,lightgray,rgb(207, 194, 194),lightgray );
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    background-color: lightgray;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.navbar a { 
+    transition: 1s ease;
+    display: inline-block;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(116, 115, 115);
+    padding: 15px 20px;
+    border-bottom: 1px solid lightslategray;
+}
+
+#menu::before {
+    content: ">";
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+.container img {
+    width: auto;
+    height: auto;
+}
+
+.ourPhotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 2 px solid black;
+}
+.galleryImg img {
+    box-shadow: 10px 10px 5px grey;
+}
+.galleryImg:hover {
+    transform: scale(1.08);
+    transition-duration: 1s;
+}
+.galleryImg:hover img {
+    box-shadow: none;
+}
+
+.yourPhotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 33.33%;
+    padding: 3em 1em 3em 1em;
+    margin: 2em 0px 2em 0px;
+}
+
+.photo img {
+    width: 100%;
+    height: 25%;
+}
+.createdAt  {
+    margin-top: 3em;
+    text-align: right;
+    color: rgb(34, 29, 16);
+    
+}
+.joinUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.joinUsForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.joinUsForm form {
+    width: 65%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nameLastName , .mailSubmit {
+    width: 100%;
+}
+.nameLastName input , .mailSubmit  input {
+    width: 100%;
+    border-radius:15px;
+}
+.form input, button {
+    padding: 1em;
+    display: inline-block;
+    margin-top: 0.3em;
+    outline: none;
+    border:1px solid grey;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .photo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .navbar a {
+        padding: 15px 1px;
+    }
+    .photo {
+        width: 100%;
+    }
+    .form input, button {
+        width: 100%;
+    }
+    .joinUsForm form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .welcome {
+        display: none;
+    }
+}
